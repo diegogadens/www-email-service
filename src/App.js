@@ -40,6 +40,9 @@
       axios.post('/email', email)
         .then((result) => {
           alert(result.data.message)
+        })
+        .catch((err) => {
+          alert(err.response.data.message)
         });
     }
 
